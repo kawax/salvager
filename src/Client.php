@@ -45,6 +45,8 @@ class Client implements Factory
         });
 
         $this->parentBrowse($callback);
+
+        static::tearDownDuskClass();
     }
 
     /**
@@ -87,6 +89,10 @@ class Client implements Factory
 
     public function __destruct()
     {
-        static::tearDownDuskClass();
+        try {
+            static::tearDownDuskClass();
+        } catch (\Exception $e) {
+            //
+        }
     }
 }

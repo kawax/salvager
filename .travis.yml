@@ -12,7 +12,6 @@ php:
   - nightly
 
 before_script:
-  - travis_retry composer self-update
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 

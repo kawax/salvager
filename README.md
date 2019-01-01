@@ -29,7 +29,7 @@ php artisan vendor:publish --provider="Revolution\Salvager\Providers\SalvagerSer
 ## Plain PHP Demo by Docker
 
 ```
-git clone https://github.com/kawax/salvager.git && cd $_
+git clone https://github.com/kawax/salvager.git salvager && cd $_
 
 docker-compose run --rm composer install
 

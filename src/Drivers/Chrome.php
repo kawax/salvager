@@ -87,8 +87,8 @@ class Chrome implements Driver
     /**
      * @return void
      */
-    public function __destruct()
-    {
-        $this->stop();
-    }
+    //    public function __destruct()
+    //    {
+    //        $this->stop();
+    //    }
 }

@@ -40,6 +40,10 @@ class Client implements Factory
     {
         $this->driver->start();
 
+        static::afterClass(function () {
+            $this->driver->stop();
+        });
+
         $this->parentBrowse($callback);
     }
 

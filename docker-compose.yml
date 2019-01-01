@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  example:
+    image: chilio/laravel-dusk-ci:stable
+    volumes:
+      - .:/app
+    working_dir: /app/examples
+    entrypoint: php
+
+  composer:
+    image: chilio/laravel-dusk-ci:stable
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: composer
+
+  phpunit:
+    image: chilio/laravel-dusk-ci:stable
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: ./vendor/bin/phpunit
+    environment:
+      - TEST_ENV=docker

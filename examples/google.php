@@ -11,7 +11,6 @@ use Symfony\Component\DomCrawler\Crawler;
 use Revolution\Salvager\Client;
 use Revolution\Salvager\Drivers\Chrome;
 
-
 Browser::$storeScreenshotsAt = __DIR__ . '/screenshots/';
 Browser::$storeConsoleLogAt = __DIR__ . '/console/';
 

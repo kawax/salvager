@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="true">
     <testsuites>
-        <testsuite name="Google Sheets Test Suite">
+        <testsuite name="Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

@@ -1,5 +1,9 @@
 # Salvager
 
+[![Build Status](https://travis-ci.org/kawax/salvager.svg?branch=master)](https://travis-ci.org/kawax/salvager)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5fca43bab4a3c98d4d1a/maintainability)](https://codeclimate.com/github/kawax/salvager/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5fca43bab4a3c98d4d1a/test_coverage)](https://codeclimate.com/github/kawax/salvager/test_coverage)
+
 WebCrawler.
 
 Build with Laravel Dusk and Symfony DomCrawler.

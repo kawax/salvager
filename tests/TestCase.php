@@ -4,13 +4,22 @@ namespace Tests;
 
 use Revolution\Salvager\Providers\SalvagerServiceProvider;
 use Revolution\Salvager\Facades\Salvager;
+use Laravel\Dusk\DuskServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->artisan('dusk:chrome-driver');
+    }
+
     protected function getPackageProviders($app)
     {
         return [
             SalvagerServiceProvider::class,
+            DuskServiceProvider::class,
         ];
     }
 
@@ -24,14 +33,14 @@ class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application $app
+     * @param  \Illuminate\Foundation\Application  $app
      *
      * @return void
      */
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('salvager.screenshots', __DIR__ . '/../examples/screenshots/');
-        $app['config']->set('salvager.console', __DIR__ . '/../examples/console/');
+        $app['config']->set('salvager.screenshots', __DIR__.'/../examples/screenshots/');
+        $app['config']->set('salvager.console', __DIR__.'/../examples/console/');
 
         if (env('TEST_ENV') === 'docker') {
             $app['config']->set('salvager.chrome', [

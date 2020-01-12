@@ -12,6 +12,7 @@ php:
   - nightly
 
 before_script:
+  - pecl install zip
   - travis_retry composer install --no-interaction --no-suggest --ignore-platform-reqs
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter

@@ -39,7 +39,7 @@ class Chrome implements Driver
      */
     public function create()
     {
-        $options = (new ChromeOptions)->addArguments($this->options);
+        $options = (new ChromeOptions())->addArguments($this->options);
 
         return RemoteWebDriver::create(
             'http://localhost:9515',

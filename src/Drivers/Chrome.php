@@ -3,12 +3,10 @@
 namespace Revolution\Salvager\Drivers;
 
 use Closure;
-use Laravel\Dusk\Chrome\SupportsChrome;
-
 use Facebook\WebDriver\Chrome\ChromeOptions;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
-
+use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Laravel\Dusk\Chrome\SupportsChrome;
 use Revolution\Salvager\Contracts\Driver;
 
 class Chrome implements Driver
@@ -28,10 +26,10 @@ class Chrome implements Driver
     public function __construct(array $options = null)
     {
         $this->options = $options ?? [
-                '--disable-gpu',
-                '--headless',
-                '--window-size=1920,1080',
-            ];
+            '--disable-gpu',
+            '--headless',
+            '--window-size=1920,1080',
+        ];
     }
 
     /**

@@ -3,12 +3,11 @@
 namespace Revolution\Salvager\Facades;
 
 use Illuminate\Support\Facades\Facade;
-
-use Revolution\Salvager\Contracts\Factory;
 use Revolution\Salvager\Contracts\Driver;
+use Revolution\Salvager\Contracts\Factory;
 
 /**
- * Class Salvager
+ * Class Salvager.
  *
  * @method void browse(\Closure $callback)
  * @method $this setDriver(Driver $driver)

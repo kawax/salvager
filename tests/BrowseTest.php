@@ -3,9 +3,8 @@
 namespace Tests;
 
 use Laravel\Dusk\Browser;
-use Symfony\Component\DomCrawler\Crawler;
-
 use Revolution\Salvager\Facades\Salvager;
+use Symfony\Component\DomCrawler\Crawler;
 
 class BrowseTest extends TestCase
 {

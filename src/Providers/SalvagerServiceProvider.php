@@ -2,18 +2,14 @@
 
 namespace Revolution\Salvager\Providers;
 
-use Illuminate\Support\ServiceProvider;
-
-use Laravel\Dusk\Browser;
 use Illuminate\Support\Facades\File;
-
-use Symfony\Component\DomCrawler\Crawler;
-
-use Revolution\Salvager\Contracts\Factory;
+use Illuminate\Support\ServiceProvider;
+use Laravel\Dusk\Browser;
 use Revolution\Salvager\Client;
-
 use Revolution\Salvager\Contracts\Driver;
+use Revolution\Salvager\Contracts\Factory;
 use Revolution\Salvager\Drivers\Chrome;
+use Symfony\Component\DomCrawler\Crawler;
 
 class SalvagerServiceProvider extends ServiceProvider
 {
@@ -23,7 +19,7 @@ class SalvagerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/salvager.php' => config_path('salvager.php'),
+            __DIR__.'/../config/salvager.php' => config_path('salvager.php'),
         ]);
 
         Browser::$storeScreenshotsAt = $this->mkdir('screenshots');
@@ -44,7 +40,7 @@ class SalvagerServiceProvider extends ServiceProvider
      */
     private function mkdir(string $name): string
     {
-        $path = config('salvager.' . $name, storage_path('salvager/' . $name));
+        $path = config('salvager.'.$name, storage_path('salvager/'.$name));
         File::makeDirectory($path, 0755, true, true);
 
         return $path;
@@ -57,7 +53,7 @@ class SalvagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/salvager.php', 'salvager');
+        $this->mergeConfigFrom(__DIR__.'/../config/salvager.php', 'salvager');
 
         $this->app->singleton(Factory::class, Client::class);
 

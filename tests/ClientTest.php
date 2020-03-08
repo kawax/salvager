@@ -3,8 +3,8 @@
 namespace Tests;
 
 use Revolution\Salvager\Client;
-use Revolution\Salvager\Contracts\Factory;
 use Revolution\Salvager\Contracts\Driver;
+use Revolution\Salvager\Contracts\Factory;
 use Revolution\Salvager\Drivers\Chrome;
 
 class ClientTest extends TestCase

@@ -3,11 +3,10 @@
 namespace Revolution\Salvager;
 
 use Closure;
-use Laravel\Dusk\Concerns\ProvidesBrowser;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
-
-use Revolution\Salvager\Contracts\Factory;
+use Laravel\Dusk\Concerns\ProvidesBrowser;
 use Revolution\Salvager\Contracts\Driver;
+use Revolution\Salvager\Contracts\Factory;
 
 class Client implements Factory
 {

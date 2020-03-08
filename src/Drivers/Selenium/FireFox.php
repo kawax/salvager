@@ -2,9 +2,8 @@
 
 namespace Revolution\Salvager\Drivers\Selenium;
 
-use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
-
+use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Revolution\Salvager\Contracts\Driver;
 
 class FireFox implements Driver

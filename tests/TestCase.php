@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use Revolution\Salvager\Providers\SalvagerServiceProvider;
-use Revolution\Salvager\Facades\Salvager;
 use Laravel\Dusk\DuskServiceProvider;
+use Revolution\Salvager\Facades\Salvager;
+use Revolution\Salvager\Providers\SalvagerServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

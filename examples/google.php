@@ -1,18 +1,16 @@
 <?php
 /**
- * Plain PHP example
+ * Plain PHP example.
  */
-
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 use Laravel\Dusk\Browser;
-use Symfony\Component\DomCrawler\Crawler;
-
 use Revolution\Salvager\Client;
 use Revolution\Salvager\Drivers\Chrome;
+use Symfony\Component\DomCrawler\Crawler;
 
-Browser::$storeScreenshotsAt = __DIR__ . '/screenshots/';
-Browser::$storeConsoleLogAt = __DIR__ . '/console/';
+Browser::$storeScreenshotsAt = __DIR__.'/screenshots/';
+Browser::$storeConsoleLogAt = __DIR__.'/console/';
 
 Browser::macro('crawler', function () {
     return new Crawler($this->driver->getPageSource() ?? '', $this->driver->getCurrentURL() ?? '');

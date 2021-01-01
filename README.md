@@ -12,7 +12,7 @@ Build with Laravel Dusk and Symfony DomCrawler.
 - https://github.com/symfony/dom-crawler
 
 ## Requirements
-- PHP >= 7.2
+- PHP >= 7.3
 - Latest Chrome. Linux, Mac, Windows.
 
 ## Installation

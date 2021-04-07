@@ -19,7 +19,7 @@ class SalvagerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/salvager.php' => config_path('salvager.php'),
+            __DIR__.'/../../config/salvager.php' => config_path('salvager.php'),
         ]);
 
         Browser::$storeScreenshotsAt = $this->mkdir('screenshots');
@@ -53,7 +53,7 @@ class SalvagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/salvager.php', 'salvager');
+        $this->mergeConfigFrom(__DIR__.'/../../config/salvager.php', 'salvager');
 
         $this->app->singleton(Factory::class, Client::class);
 

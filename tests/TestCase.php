@@ -8,11 +8,17 @@ use Revolution\Salvager\Providers\SalvagerServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
+    protected static $driver_installed = false;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->artisan('dusk:chrome-driver');
+        if (! self::$driver_installed) {
+            $this->artisan('dusk:chrome-driver --detect');
+        }
+
+        self::$driver_installed = true;
     }
 
     protected function getPackageProviders($app)

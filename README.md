@@ -76,6 +76,10 @@ class SalvagerController
 
 https://github.com/kawax/salvager-project
 
+## Develop
+```
+docker-compose run --rm phpunit
+```
+
 ## LICENSE
 MIT  
-Copyright kawax

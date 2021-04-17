@@ -16,9 +16,9 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
         if (! self::$driver_installed) {
             $this->artisan('dusk:chrome-driver --detect');
-        }
 
-        self::$driver_installed = true;
+            self::$driver_installed = true;
+        }
     }
 
     protected function getPackageProviders($app)

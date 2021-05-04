@@ -11,7 +11,7 @@ return [
         // '--disable-dev-shm-usage',
     ],
 
-//    'remote_server_url' => 'http://selenium:4444/wd/hub',
+    //    'remote_server_url' => 'http://selenium:4444/wd/hub',
 
     'screenshots' => storage_path('salvager/screenshots'),
     'console'     => storage_path('salvager/console'),

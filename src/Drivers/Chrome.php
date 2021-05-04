@@ -38,9 +38,10 @@ class Chrome implements Driver
     public function create()
     {
         $options = (new ChromeOptions())->addArguments($this->options);
+        $remote_server_url = config('salvager.remote_server_url') ?? 'http://localhost:9515';
 
         return RemoteWebDriver::create(
-            'http://localhost:9515',
+            $remote_server_url,
             DesiredCapabilities::chrome()->setCapability(
                 ChromeOptions::CAPABILITY,
                 $options

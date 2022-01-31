@@ -1,8 +1,6 @@
 # Salvager
 
-[![Build Status](https://travis-ci.com/kawax/salvager.svg?branch=master)](https://travis-ci.com/kawax/salvager)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5fca43bab4a3c98d4d1a/maintainability)](https://codeclimate.com/github/kawax/salvager/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5fca43bab4a3c98d4d1a/test_coverage)](https://codeclimate.com/github/kawax/salvager/test_coverage)
+[![tests](https://github.com/kawax/salvager/actions/workflows/tests.yml/badge.svg)](https://github.com/kawax/salvager/actions/workflows/tests.yml)
 
 WebCrawler.
 
@@ -12,7 +10,7 @@ Build with Laravel Dusk and Symfony DomCrawler.
 - https://github.com/symfony/dom-crawler
 
 ## Requirements
-- PHP >= 7.4
+- PHP >= 8.0
 - Latest Chrome. Linux, Mac, Windows.
 
 ## Installation

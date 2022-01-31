@@ -11,7 +11,7 @@ class FireFox implements Driver
     /**
      * @return RemoteWebDriver
      */
-    public function create()
+    public function create(): RemoteWebDriver
     {
         return RemoteWebDriver::create(
             'http://localhost:4444/wd/hub', DesiredCapabilities::firefox()

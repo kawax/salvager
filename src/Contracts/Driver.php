@@ -9,7 +9,7 @@ interface Driver
     /**
      * @return RemoteWebDriver;
      */
-    public function create();
+    public function create(): RemoteWebDriver;
 
     /**
      * @return void

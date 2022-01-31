@@ -15,18 +15,13 @@ class Client implements Factory
     }
 
     /**
-     * @var Driver
-     */
-    private $driver;
-
-    /**
      * Client constructor.
      *
      * @param  Driver  $driver
      */
-    public function __construct(Driver $driver)
+    public function __construct(private Driver $driver)
     {
-        $this->driver = $driver;
+        //
     }
 
     /**
@@ -51,7 +46,7 @@ class Client implements Factory
     /**
      * @return RemoteWebDriver
      */
-    protected function driver()
+    protected function driver(): RemoteWebDriver
     {
         return $this->driver->create();
     }
@@ -59,7 +54,7 @@ class Client implements Factory
     /**
      * @return Driver
      */
-    public function getDriver()
+    public function getDriver(): Driver
     {
         return $this->driver;
     }
@@ -68,7 +63,7 @@ class Client implements Factory
      * @param  Driver  $driver
      * @return $this
      */
-    public function setDriver(Driver $driver)
+    public function setDriver(Driver $driver): static
     {
         $this->driver = $driver;
 
@@ -79,7 +74,7 @@ class Client implements Factory
      * @param  bool  $withDataSet
      * @return string
      */
-    protected function getName(bool $withDataSet = true)
+    protected function getName(bool $withDataSet = true): string
     {
         return '';
     }

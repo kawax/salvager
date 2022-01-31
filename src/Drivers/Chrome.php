@@ -14,16 +14,11 @@ class Chrome implements Driver
     use SupportsChrome;
 
     /**
-     * @var array
-     */
-    private $options;
-
-    /**
      * Chrome constructor.
      *
      * @param  array|null  $options
      */
-    public function __construct(array $options = null)
+    public function __construct(private ?array $options = null)
     {
         $this->options = $options ?? [
             '--disable-gpu',
@@ -35,7 +30,7 @@ class Chrome implements Driver
     /**
      * @return RemoteWebDriver
      */
-    public function create()
+    public function create(): RemoteWebDriver
     {
         $options = (new ChromeOptions())->addArguments($this->options);
         $remote_server_url = config('salvager.remote_server_url') ?? 'http://localhost:9515';

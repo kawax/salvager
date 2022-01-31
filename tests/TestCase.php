@@ -8,7 +8,7 @@ use Revolution\Salvager\Providers\SalvagerServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
-    protected static $driver_installed = false;
+    protected static bool $driver_installed = false;
 
     public function setUp(): void
     {

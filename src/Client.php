@@ -22,7 +22,7 @@ class Client implements Factory
     /**
      * Client constructor.
      *
-     * @param Driver $driver
+     * @param  Driver  $driver
      */
     public function __construct(Driver $driver)
     {
@@ -30,7 +30,7 @@ class Client implements Factory
     }
 
     /**
-     * @param Closure $callback
+     * @param  Closure  $callback
      *
      * @throws \Exception
      * @throws \Throwable
@@ -65,8 +65,7 @@ class Client implements Factory
     }
 
     /**
-     * @param Driver $driver
-     *
+     * @param  Driver  $driver
      * @return $this
      */
     public function setDriver(Driver $driver)
@@ -77,8 +76,7 @@ class Client implements Factory
     }
 
     /**
-     * @param bool $withDataSet
-     *
+     * @param  bool  $withDataSet
      * @return string
      */
     protected function getName(bool $withDataSet = true)

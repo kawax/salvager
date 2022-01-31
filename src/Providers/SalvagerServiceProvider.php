@@ -34,8 +34,7 @@ class SalvagerServiceProvider extends ServiceProvider
     }
 
     /**
-     * @param string $name
-     *
+     * @param  string  $name
      * @return string
      */
     private function mkdir(string $name): string

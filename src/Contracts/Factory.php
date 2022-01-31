@@ -7,7 +7,7 @@ use Closure;
 interface Factory
 {
     /**
-     * @param Closure $callback
+     * @param  Closure  $callback
      *
      * @throws \Exception
      * @throws \Throwable

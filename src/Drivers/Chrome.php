@@ -21,7 +21,7 @@ class Chrome implements Driver
     /**
      * Chrome constructor.
      *
-     * @param array|null $options
+     * @param  array|null  $options
      */
     public function __construct(array $options = null)
     {
@@ -74,8 +74,7 @@ class Chrome implements Driver
     }
 
     /**
-     * @param Closure $callback
-     *
+     * @param  Closure  $callback
      * @return void
      */
     public static function afterClass(Closure $callback)

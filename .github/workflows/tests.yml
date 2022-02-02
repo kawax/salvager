@@ -29,6 +29,7 @@ jobs:
       - name: Test
         run: docker-compose run --rm phpunit
       - name: codeclimate
+        if: success() && (github.event_name != 'pull_request')
         uses: paambaati/codeclimate-action@v3.0.0
         with:
           prefix: /app
